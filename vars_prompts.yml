@@ -1,0 +1,14 @@
+
+
+---
+- hosts: prod
+  become: yes
+  gather_facts: false
+  vars_prompt:
+          - name: url
+            prompt: enter a url
+            private: yes
+  tasks:
+          - name: print a url
+            debug:
+                    msg: url={{url}}

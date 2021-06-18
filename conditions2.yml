@@ -1,0 +1,13 @@
+---
+- name: conditions
+  hosts: prod
+  tasks:
+          - name: run when os is centos
+            debug:
+                    msg: welcome to redhat family 
+            when:  ansible_facts[ 'os_family' ]== "Redhat"
+          - name: run when os is ubuntu
+            debug:
+                    msg: welcome to debian family 
+            when:  ansible_facts[ 'os_family' ]== "Debian"
+

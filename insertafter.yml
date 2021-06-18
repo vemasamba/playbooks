@@ -1,0 +1,9 @@
+---
+- hosts: prod
+  tasks:
+          - name: insert a message in a file
+            lineinfile:
+                    path: /opt/b
+                    insertafter: championship
+                    line: kohli is the captain of india
+

@@ -1,0 +1,9 @@
+---
+- hosts: prod
+  gather_facts: no
+  tasks:
+          - name: add a single line content
+            lineinfile:
+                    path: /opt/b
+                    line: india will win the test championship
+                    create: no

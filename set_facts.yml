@@ -1,0 +1,16 @@
+---
+- hosts: prod
+  tasks:
+          - name: run shell command
+            shell: uptime
+            register: out
+          - name: print out variable
+            debug:
+                    msg: print= {{out.stdout}}
+          - name: declare a variable
+            set_fact:
+                    status= {{out.rc}}
+          - name: print uptime status
+            debug:
+                    msg: status of uptime= {{status}}
+

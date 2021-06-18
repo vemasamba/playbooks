@@ -1,0 +1,11 @@
+---
+- hosts: prod
+  tasks:
+          - name: install a webserver
+            debug:
+                    msg: install a web install
+            tags: web 
+          - name: install a app server
+            debug:
+                    msg: install a app server
+            tags: app 

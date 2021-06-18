@@ -1,0 +1,10 @@
+---
+- hosts: prod
+  vars:
+          URL: www.youtube.com
+  tasks:
+          - name: declaring a variable
+            debug:
+                    msg: entered url= {{URL}}
+
+

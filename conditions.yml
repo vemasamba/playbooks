@@ -1,0 +1,14 @@
+---
+- name: conditions
+  hosts: prod
+  tasks:
+          - name: run when os is centos
+            debug:
+                    msg: hello to centos
+            when: ansible_facts[ 'distribution'] == "centos"
+          - name: run when os is ubuntu
+            debug:
+                    msg: hello to ubuntu
+            when: ansible_facts[ 'distribution'] == "Ubuntu"
+                         
+

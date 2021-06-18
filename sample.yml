@@ -1,0 +1,7 @@
+---
+- hosts: prod
+  tasks:
+          - name: printing a message
+            debug:
+                    msg: welcome to ansible playbooks
+       

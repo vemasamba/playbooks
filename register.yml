@@ -1,0 +1,10 @@
+---
+- hosts: prod
+  tasks:
+          - name: display a load on server
+            shell: uptime
+            register: output
+          - name: print uptime 
+            debug:
+                    msg: load= {{output.stdout}} 
+

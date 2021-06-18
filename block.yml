@@ -1,0 +1,12 @@
+---
+- hosts: prod
+  tasks:
+          - name: add a multi content in a file
+            blockinfile:
+                    path: /opt/a
+                    block: hai frnds, how are you all
+                            n janf ,fnkf jnf klenfkjw emfkjergwvm
+                             fkewhfjkwngkjrbgjrnekhe
+                    create: no
+
+

@@ -1,0 +1,5 @@
+---
+- hosts: prod
+  tasks:
+          - name: copying a file
+            copy: src=/opt/c dest=/opt/

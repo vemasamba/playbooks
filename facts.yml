@@ -1,0 +1,11 @@
+---
+- hosts: prod
+  
+  tasks:
+          - name: display a os 
+            debug:
+                    msg: os distribution = {{ansible_distribution}}
+                    msg: os family= {{ansible_os_family}}    
+
+
+

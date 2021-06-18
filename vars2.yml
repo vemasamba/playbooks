@@ -1,0 +1,10 @@
+---
+- hosts: prod
+  vars:
+          URL: www.youtube.com
+  vars_files:
+          - variable.yml
+  tasks:
+          - name: declare a variable        
+            debug:
+                    msg: entered url = {{URL}}

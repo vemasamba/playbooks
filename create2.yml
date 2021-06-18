@@ -1,0 +1,12 @@
+---
+- hosts: prod
+  tasks:
+          - name: create a multiple files with different permissions
+            file:
+                    path: /opt/{{ item.file }}
+                    state: touch
+                    mode: "{{ item.mode }}"
+            with_items:
+                    - { file: ram , mode: '0755' }
+                    - { file: pavan , mode: '0566' }
+

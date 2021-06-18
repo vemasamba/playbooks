@@ -1,0 +1,10 @@
+---
+- hosts: prod
+  become: yes
+  tasks:
+          - name: install a apache2 server
+            apt: name=apache2 state=present 
+            when: ansible_facts[ 'distribution' ]== "Ubuntu"
+          - name: install a httpd server
+            apt: name=httpd state=present
+            when: ansible_facts[ 'distribution' ]== "Centos"  

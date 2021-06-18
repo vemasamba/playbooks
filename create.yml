@@ -1,0 +1,12 @@
+---
+- hosts: prod
+  tasks:
+          - name: create a multiple files
+            file:
+                    path: /opt/{{item}}
+                    state: touch
+                    mode: 0775
+            with_items:
+                    - d 
+                    - e
+                    - f 

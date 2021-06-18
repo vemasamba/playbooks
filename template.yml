@@ -1,0 +1,10 @@
+---
+- hosts: prod
+  tasks:
+          - name: template a file
+            template:
+                    src: /opt/playbooks/template.txt
+                    dest: /opt/
+            vars:
+                    name: samba
+                    place: india
